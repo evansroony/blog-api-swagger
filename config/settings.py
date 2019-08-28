@@ -38,18 +38,30 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # 3rd-party apps
-    'rest_framework',  # new
+    # allauth
+    'django.contrib.sites',
 
-    # local app
+    # 3rd-party apps
+    'allauth.account',
+    'allauth.socialaccount',
+    'rest_auth',
+    'rest_auth.registration',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'allauth',
+
+    # Local
     'posts.apps.PostsConfig',
 ]
 
 # new
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny',
-    ]
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication', 'rest_framework.authentication.TokenAuthentication',
+    ],
 }
 
 MIDDLEWARE = [
