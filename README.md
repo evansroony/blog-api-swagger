@@ -4,16 +4,15 @@ blog api rest auth swagger
 
 # Diagram:
 
-|Endpoint                            | HTTP Verb
-
 |------------------------------------|----------|
 
-/                                    | GET
-/:pk/                                | GET
-users/                               | GET
-users/:pk/                           | GET
-/rest-auth/registration              | POST
-/rest-auth/login                     | POST
-/rest-auth/logout                    | GET
-/rest-auth/password/reset            | POST
-/rest-auth/password/reset/confirm    | POST
+Markup: [heading-3](#Endpoint "HTTP Verb")
+Markup: [heading-3](#/ "| GET")
+Markup: [heading-3](#/:pk/ "| GET")
+Markup: [heading-3](#users/ "| GET")
+Markup: [heading-3](#users/:pk/ "| GET")
+Markup: [heading-3](#/rest-auth/registration "| POST")
+Markup: [heading-3](#/rest-auth/login "| POST")
+Markup: [heading-3](#/rest-auth/logout "| GET")
+Markup: [heading-3](#/rest-auth/password/reset "| POST")
+Markup: [heading-3](#/rest-auth/password/reset/confirm "| POST")
