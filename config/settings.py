@@ -54,6 +54,10 @@ INSTALLED_APPS = [
     'posts.apps.PostsConfig',
 ]
 
+# new allauth email
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+SITE_ID = 1
+
 # new
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
