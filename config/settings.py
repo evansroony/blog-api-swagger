@@ -42,13 +42,14 @@ INSTALLED_APPS = [
     'django.contrib.sites',
 
     # 3rd-party apps
+    'rest_framework',
+    'rest_framework.authtoken',
+    'rest_framework_swagger',
+    'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'rest_auth',
     'rest_auth.registration',
-    'rest_framework',
-    'rest_framework.authtoken',
-    'allauth',
 
     # Local
     'posts.apps.PostsConfig',
@@ -66,6 +67,13 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.SessionAuthentication', 'rest_framework.authentication.TokenAuthentication',
     ],
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',  # swagger schema
+}
+
+# swagger login urls
+SWAGGER_SETTINGS = {
+    'LOGIN_URL': 'rest_framework:login',
+    'LOGOUT_URL': 'rest_framework:logout',
 }
 
 MIDDLEWARE = [
