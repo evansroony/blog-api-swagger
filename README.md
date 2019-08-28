@@ -1,5 +1,5 @@
 # blog-api-swagger
-blog api rest auth swagger
+blog api rest auth python django swagger
 
 
 # Diagram:
