@@ -6,6 +6,7 @@ from rest_framework_swagger.views import get_swagger_view
 
 API_TITLE = 'Rest APIs'
 API_DESCRIPTION = 'A Web API for creating and editing blog posts.'
+schema_view_in = get_schema_view(title=API_TITLE)
 schema_view = get_swagger_view(title=API_TITLE)
 
 urlpatterns = [
@@ -17,6 +18,6 @@ urlpatterns = [
         title=API_TITLE,
         description=API_DESCRIPTION
     )),
-    # path('schema/', schema_view),
+    path('schema/', schema_view_in),
     path('swagger-docs/', schema_view),
 ]
